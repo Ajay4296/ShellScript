@@ -8,5 +8,17 @@ case $input in
 echo employe present $present day in 20 days
 ;;
 2)
-CalculateDailyEm
+dailywage
+perdaywage=$1
+echo "daily wage :-$perdaywage
+;;
+part_time
+parttimewage=$1
+echo "part time wage :- $parttimewage"
+;;
+0)
+echo "enter avalid choice"
+;;
+esac
+
 
