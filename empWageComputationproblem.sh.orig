@@ -1,4 +1,5 @@
-<<<<<<< .merge_file_a08920
+<<<<<<< HEAD
+
 workingdays=20
 echo total workingdays
 presentemp=0
@@ -19,12 +20,21 @@ echo total present employee = $presentemp
 
 echo total absent employee = $absenttemp
 
-=======
+
 function dailywage()
 {
 	hours_per_day=8
 	wage_per_hour=20
 	daily_wage=$(($hours_per_day * $wage_per_hour))
 	return $daily_wage
+}
+=======
+echo "Add part time employe and wage"
+function part_time()
 {
->>>>>>> .merge_file_a09540
+perdayhour=4
+wage=20
+totalparttimewage=$(( $perdayhour*$wage ))
+return $totalparttimewage
+>>>>>>> usecase-3_{part_wage}
+

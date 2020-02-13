@@ -1,4 +1,3 @@
-
 workingdays=20
 echo total workingdays
 presentemp=0
@@ -27,4 +26,13 @@ function dailywage()
 	daily_wage=$(($hours_per_day * $wage_per_hour))
 	return $daily_wage
 }
+
+echo "Add part time employe and wage"
+function part_time()
+{
+perdayhour=4
+wage=20
+totalparttimewage=$(( $perdayhour*$wage ))
+return $totalparttimewage
+
 
