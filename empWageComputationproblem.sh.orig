@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-
 workingdays=20
 echo total workingdays
 presentemp=0
@@ -28,7 +27,7 @@ function dailywage()
 	daily_wage=$(($hours_per_day * $wage_per_hour))
 	return $daily_wage
 }
-=======
+
 echo "Add part time employe and wage"
 function part_time()
 {
@@ -36,5 +35,29 @@ perdayhour=4
 wage=20
 totalparttimewage=$(( $perdayhour*$wage ))
 return $totalparttimewage
->>>>>>> usecase-3_{part_wage}
+=======
+echo "select  choice who you want to execute"
+echo " 1 -check attendence"
+echo "2-check Daily employe wage"
+echo "3-part_time_wage"
+read input
+case $input in 
+1)
+echo employe present $present day in 20 days
+;;
+2)
+dailywage
+perdaywage=$1
+echo "daily wage :-$perdaywage
+;;
+part_time
+parttimewage=$1
+echo "part time wage :- $parttimewage"
+;;
+0)
+echo "enter avalid choice"
+;;
+esac
+>>>>>>> Usecase_4_{case_statement}
+
 
