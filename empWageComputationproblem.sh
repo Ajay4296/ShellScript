@@ -9,5 +9,12 @@ days=$(($days+1))
 fi
 done
 echo "total part time work $days"
-
+PartTime
+income=$?
+parttimeIncome=$(( $days*$income ))
+Dailywage
+fullTimeIncome=$?
+fullTimeIncome=$(( $presentemp*$fullTimeIncome ))
+totalIncome=$(( $income+$fullTimeIncome ))
+echo "total Income of employe :-$totalIncome"
 
