@@ -1,4 +1,4 @@
-
+<<<<<<< .merge_file_a08920
 workingdays=20
 echo total workingdays
 presentemp=0
@@ -19,7 +19,7 @@ echo total present employee = $presentemp
 
 echo total absent employee = $absenttemp
 
-
+=======
 function dailywage()
 {
 	hours_per_day=8
@@ -27,4 +27,4 @@ function dailywage()
 	daily_wage=$(($hours_per_day * $wage_per_hour))
 	return $daily_wage
 {
-
+>>>>>>> .merge_file_a09540
