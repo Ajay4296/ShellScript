@@ -1,2 +1,7 @@
-echo welcome to employe wage computation problem
+totalhour()
+{
+workhour=$totalworkhour
+echo "total work hour =$workhour"
+}
+
 
