@@ -1,4 +1,5 @@
 
+
 #!/bin/bash/ 
 workingdays=20
 
@@ -83,17 +84,20 @@ do
 a=$((RANDOM%2))
 if(( $a==0 ))
 then
-days=$(($days+1))
+PTworkdays=$(($PTworkdays+1))
 fi
 done
-echo "total part time work $days"
+echo "total part time work $PTworkdays"
 PartTime
 income=$?
-parttimeIncome=$(( $days*$income ))
+parttimeIncome=$(( $PTworkdays*$income ))
 Dailywage
 fullTimeIncome=$?
 fullTimeIncome=$(( $presentemp*$fullTimeIncome ))
 totalIncome=$(( $income+$fullTimeIncome ))
 echo "total Income of employe :-$totalIncome"
+
+totalworkinghour=$(($(($PTworkdays*4))+$(($presentemp*8))))
+echo "total working hours = $totalworkinghour"
 
 
