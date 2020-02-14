@@ -1,4 +1,5 @@
 
+
 #!/bin/bash/ 
 workingdays=20
 
@@ -65,7 +66,7 @@ echo "enter avalid choice"
 esac
 
 
-echo " calculate total income of employee in a month"
+echo " calculate total income of employee in a month:-"
 days=0
 for((i=1;i<=20;i++))
 do
@@ -97,14 +98,41 @@ totalhour
 wh=$?
 Dailywage
 perdaydailywage=$?
-echo $perdaydailywage
 PartTime
 parttimedailywage=$?
-echo $parttimedailywage
 totaldailywage=$(($perdaydailywage+$parttimedailywage))
 totalincome=$totalIncome
 echo "total work hour of employee in a month=$wh"
 echo "total daily income of the employe is=$totaldailywage"
 echo "total monthly income of employe is=$totalincome"
 
+echo "daily activity of  employee :-"
+count=0
+for((i=1;i<=20;i++))
+do 
+a=$((RANDOM%4))
+if(($a<=1))
+then 
+echo "Employee is present on day $i of the month"
+Dailywage
+d=$?
+echo "total income of day $i is $d" 
+fi
+
+
+if(($a==2))
+then
+echo "employe is absent on day $i of the month"
+fi
+if(($a==3))
+then
+echo "employee is present and want overtime also"
+Dailywage
+b=$?
+PartTime
+p=$?
+total=$(($p+$b))
+echo "total income of day $i  is $total"
+fi
+done
 
