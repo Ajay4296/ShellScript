@@ -1,4 +1,4 @@
-echo "select  choice who you want to execute"
+echo "select  choice on your concern"
 echo " 1 -check attendence"
 echo "2-check Daily employe wage"
 echo "3-part_time_wage"
@@ -12,6 +12,7 @@ dailywage
 perdaywage=$1
 echo "daily wage :-$perdaywage
 ;;
+3)
 part_time
 parttimewage=$1
 echo "part time wage :- $parttimewage"
