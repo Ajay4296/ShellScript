@@ -1,6 +1,7 @@
 
 
 
+
 #!/bin/bash/ 
 workingdays=20
 
@@ -106,5 +107,15 @@ totalhour()
 workhour=$totalworkhour
 echo "total work hour =$workhour"
 }
+
+
+Dailywage
+perdaydailywage=$?
+PartTime
+Parttimedailywage=$?
+totaldailywage=$(( $perdaydailywage+$parttimedailywage ))
+totalincome=$totalIncome
+echo "total daily income of the employe is=$totaldailywage"
+echo "total monthly income of employe is=$totalincome"
 
 

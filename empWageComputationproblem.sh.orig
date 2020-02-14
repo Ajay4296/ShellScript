@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 
+
 #!/bin/bash/ 
 workingdays=20
 
@@ -101,12 +102,20 @@ echo "total Income of employe :-$totalIncome"
 totalworkinghour=$(($(($PTworkdays*4))+$(($presentemp*8))))
 echo "total working hours = $totalworkinghour"
 
-=======
 totalhour()
 {
 workhour=$totalworkhour
 echo "total work hour =$workhour"
 }
 
->>>>>>> UseCase_7_{function_for_get_work_hour}
+=======
+DailyWage
+perdaydailywage=$?
+PartTime
+Parttimedailywage=$?
+totaldailywage=$(($perdaydailywage+$parttimedailywage))
+totalincome=$totalIncome
+echo "total daily income of the employe is=$totaldailywage"
+echo "total monthly income of employe is=$totalincome"
+>>>>>>> UseCase_8_{total_daily_wage_along_with_total_wage}
 
