@@ -1,7 +1,4 @@
 
-
-
-
 #!/bin/bash/ 
 workingdays=20
 
@@ -16,23 +13,14 @@ do
 random=$(($RANDOM%2))
 if(($random==0))
 then
-
-echo employe  is present
 presentemp=$(($presentemp+1))
-
 else
-
-echo employee  is absent
 absenttemp=$(($absenttemp+1))
-
 fi
 done
+echo total present days in 20 days = $presentemp
 
-
-echo total present employee = $presentemp
-
-echo total absent employee = $absenttemp
-
+echo total absent day in total days = $absenttemp
 Dailywage()
 {
 	hours_per_day=8
@@ -40,8 +28,6 @@ Dailywage()
 	daily_wage=$((20 * 8))
 	return $daily_wage
 }
-
-echo "Add part time employe and wage"
 
 PartTime()
 {
@@ -51,7 +37,7 @@ totalparttimewage=$(( 20*4 ))
 return $totalparttimewage
 }
 
-echo "select  choice who you want to execute"
+echo "select  choice of your concern"
 echo " 1 -check attendence"
 echo "2-check Daily employe wage"
 echo "3-part_time_wage"
@@ -65,13 +51,13 @@ echo "employe present $presentemp day in 20 days"
 2)
 Dailywage
 perdaywage=$?
-echo "daily wage :-$perdaywage"
+echo " full time daily wage of employee  :-$perdaywage"
 ;;
 
 3)
 PartTime
 parttimewage=$?
-echo "part time wage :- $parttimewage"
+echo "part time daily wage of employee  :- $parttimewage"
 ;;
 *)
 echo "enter avalid choice"
@@ -98,23 +84,26 @@ fullTimeIncome=$?
 fullTimeIncome=$(( $presentemp*$fullTimeIncome ))
 totalIncome=$(( $income+$fullTimeIncome ))
 echo "total Income of employe :-$totalIncome"
-
+echo "calculate total working hour of the employee"
 totalworkinghour=$(($(($PTworkdays*4))+$(($presentemp*8))))
-echo "total working hours = $totalworkinghour"
 
 totalhour()
 {
-workhour=$totalworkhour
-echo "total work hour =$workhour"
+workhour=$totalworkinghour
+echo "total work hour of employee =$workhour"
+return $workhour
 }
-
-
+totalhour
+wh=$?
 Dailywage
 perdaydailywage=$?
+echo $perdaydailywage
 PartTime
-Parttimedailywage=$?
-totaldailywage=$(( $perdaydailywage+$parttimedailywage ))
+parttimedailywage=$?
+echo $parttimedailywage
+totaldailywage=$(($perdaydailywage+$parttimedailywage))
 totalincome=$totalIncome
+echo "total work hour of employee in a month=$wh"
 echo "total daily income of the employe is=$totaldailywage"
 echo "total monthly income of employe is=$totalincome"
 
