@@ -14,7 +14,7 @@ echo employee  is absent
 absenttemp=$(($absenttemp+1))
 fi
 done
-echo total present employee = $presentemp
+echo total present days in 20 days = $presentemp
 
-echo total absent employee = $absenttemp
+echo total absent days in 20 days = $absenttemp
 
