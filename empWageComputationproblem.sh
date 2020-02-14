@@ -5,13 +5,13 @@ do
 a=$((RANDOM%2))
 if(( $a==0 ))
 then
-days=$(($days+1))
+PTworkdays=$(($days+1))
 fi
 done
 echo "total part time work $days"
 PartTime
 income=$?
-parttimeIncome=$(( $days*$income ))
+parttimeIncome=$(( $PTworkdays*$income ))
 Dailywage
 fullTimeIncome=$?
 fullTimeIncome=$(( $presentemp*$fullTimeIncome ))
