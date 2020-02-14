@@ -1,5 +1,6 @@
 
 
+
 #!/bin/bash/ 
 workingdays=20
 
@@ -99,5 +100,11 @@ echo "total Income of employe :-$totalIncome"
 
 totalworkinghour=$(($(($PTworkdays*4))+$(($presentemp*8))))
 echo "total working hours = $totalworkinghour"
+
+totalhour()
+{
+workhour=$totalworkhour
+echo "total work hour =$workhour"
+}
 
 
