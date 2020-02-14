@@ -1,2 +1,5 @@
-echo welcome to employe wage computation problem
+totalworkinghour=$(($(($PTworkdays*4))+$(($presentemp*8))))
+
+
+
 
