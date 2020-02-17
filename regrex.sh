@@ -1,7 +1,7 @@
-checkFname(){
+FirstName(){
 	printf "Enter your Fname: "
 	read Fname
-	if [[ $Fname =~ ^[[:upper:]]{1}[[:lower:]]*$ ]];
+	if [[ $Fname =~ ^[A-Z]{1}[a-z]*$ ]];
 	then
 		echo "Valid first name"
 	else
@@ -9,24 +9,24 @@ checkFname(){
 
 	fi
 }
-checkFname
+FirstName
 
-checkLname(){
+LastName(){
 	printf "Enter your last name: "
 	read Lname
-	if [[ $Lname =~ ^[[:upper:]]{1}[[:lower:]]*$ ]];
+	if [[ $Lname =~ ^[A-Z]{1}[a-z]*$ ]];
 	then
 		echo "valid Last name"
 	else
 		echo"Invalid Last name"
 	fi
 }
-checkLname
+LastName
 
 checkMobileNo(){
 	printf "Enter your mobile No.: "
 	read mobile
-	if [[ $mobile =~ ^[+91][[:digit:]]{10}$ ]];
+	if [[ $mobile =~ ^[+91]{3}[0-9]{10}$ ]];
 	then
 		echo "Valid mobile no."
 	else
@@ -38,7 +38,7 @@ checkMobileNo
 checkEmail(){
 	printf "Enter the Email id: "
 	read Email
-	if [[ $Email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[com]{3}$ ]];
+	if [[ $Email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|edu|net)$ ]];
 	then
 		echo "Valid Email Id"
 	else
